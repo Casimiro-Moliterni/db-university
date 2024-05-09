@@ -31,3 +31,19 @@ WHERE YEAR(`date_of_birth`) > 1994;
 /////////////--------------\\\\\\\\\\\\\\\
 
 4 - SELEZIONARE TUTTI I CORSI DEL PRIMO SEMSTRE DEL PRIMO ANNO DI UN QUALSIASI CORSO DI LAUREA(286)
+
+SELECT * 
+FROM `courses`
+WHERE `period` = 'I semestre'
+AND
+ `year` = 1;
+
+ /////////////--------------\\\\\\\\\\\\\\\
+
+ 5 - SELEZIONARE TUTTI GLI APPELLI D'ESAME CHE AVVENGONO NEL POMERIGGIO (DOPO LE 14 ) DEL 20/06/2020 (21)
+
+SELECT * 
+FROM `exams` 
+WHERE `date` = '2020-06-20'
+AND
+HOUR(`hour`) > 14-01 ; 
