@@ -1,0 +1,33 @@
+ 1 - SELEZIONARE TUTTI GLI STUDENTI NATI NEL 1990 (160)
+
+prima opzione 
+
+SELECT * 
+FROM `students` 
+WHERE `date_of_birth` like '1990-%';
+
+seconda opzione 
+
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) = 1990;
+
+/////////////--------------\\\\\\\\\\\\\\\
+
+2 - SELEZIONARE TUTTI I CORSI CHE VALGONO PIù DI 10 CREDITI (479)
+
+SELECT *
+FROM `courses`
+WHERE `cfu` > 10;
+
+/////////////--------------\\\\\\\\\\\\\\\
+
+3 - SELEZIONARE TUTTI GLI STUDENTI CHE PIU' DI 30 ANNI 
+
+SELECT *
+FROM `students` 
+WHERE YEAR(`date_of_birth`) > 1994;
+
+/////////////--------------\\\\\\\\\\\\\\\
+
+4 - SELEZIONARE TUTTI I CORSI DEL PRIMO SEMSTRE DEL PRIMO ANNO DI UN QUALSIASI CORSO DI LAUREA(286)
